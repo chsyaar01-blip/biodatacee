@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Diri Chesya</title>
+  <style>
+    body {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background: #ffd6e7;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 50px auto;
+      position: relative;
+      z-index: 2;
+    }
+    h1 {
+      color: #ec4899;
+    }
+    h2 {
+      color: #f472b6;
+    }
+    p {
+      font-size: 16px;
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: gray;
+    }
+    /* Tombol navigasi */
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background: #f472b6;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #ec4899;
+    }
+    /* Halaman */
+    .page { display: none; }
+    .active { display: block; }
+
+    /* Galeri */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Glitter */
+    .glitter {
+      position: fixed;
+      top: -50px;
+      font-size: 22px;
+      color: pink;
+      animation: fall 5s linear forwards;
+      z-index: 1;
+      pointer-events: none;
+    }
+    @keyframes fall {
+      from { transform: translateY(-50px); opacity: 1; }
+      to { transform: translateY(100vh); opacity: 0; }
+    }
+    /* 🔽 ini tambahan biar responsif */
+    @media (max-width: 600px) {
+      footer {
+        font-size: 12px;
+        padding: 8px;
+        flex-direction: column;
+        text-align: center;
+      }
+      footer a.sosmed {
+        display: block;
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Halaman 1 -->
+  <div class="page active" id="page1">
+    <div class="card">
+      <h1>🌸 HAI, AKU CHESYA! 🌸</h1>
+      <h2>Identitas Dasar</h2>
+      <p><b>Nama:</b> Chesya Auralia Ramadhani</p>
+      <p><b>Tempat, Tanggal Lahir:</b> Semarang, 10 September 2008</p>
+       <p><b>Panggilan:</b>Ce</p>
+      <p><b>Zodiak:</b> Virgo</p>
+
+      <a href="#" class="btn" onclick="showPage('page2')">NEXT ⏭</a>
+      <a href="#" class="btn" onclick="showPage('page5')">Mini Galeri</a>
+
+    </div>
+  </div>
+
+  <!-- Halaman 2 -->
+  <div class="page" id="page2">
+    <div class="card">
+      <h2>Tentang Aku</h2>
+      <p>Aku Ce, seseorang yang selalu tertarik pada cerita horor, rasa hangat matcha, 
+        dan tidur panjang yang menenangkan. Bagiku, hidup itu tentang menemukan keseimbangan
+        antara rasa penasaran, ketenangan, dan waktu untuk diri sendiri. Selamat datang di ruang kecilku.</p>
+
+      <a href="#" class="btn" onclick="showPage('page1')">⏮ PREV</a>
+      <a href="#" class="btn" onclick="showPage('page3')">NEXT ⏭</a>
+      <a href="#" class="btn" onclick="showPage('page5')">Mini Galeri</a>
+
+    </div>
+  </div>
+
+  <!-- Halaman 3 -->
+  <div class="page" id="page3">
+    <div class="card">
+      <h2>Fun Facts</h2>
+      <p>Aku termasuk orang yang pelupa untuk hal-hal sepele, tapi justru itu yang membuat hidupku terasa penuh kejutan.
+        Untungnya, untuk hal-hal penting aku tetap bisa diandalkan. Mungkin ini sisi imutku yang nggak bisa hilang.</p>
+
+      <a href="#" class="btn" onclick="showPage('page2')">⏮ PREV</a>
+      <a href="#" class="btn" onclick="showPage('page4')">NEXT ⏭</a>
+      <a href="#" class="btn" onclick="showPage('page5')">Mini Galeri</a>
+
+    </div>
+  </div>
+
+  <!-- Halaman 4 -->
+  <div class="page" id="page4">
+    <div class="card">
+      <h2>Hobi</h2>
+      <p>Aku suka menari, bernyanyi, dan modeling. Selama tiga tahun aku aktif di ekstra modeling,
+        sekaligus menjadi model untuk kakak kelasku. Aku juga mengikuti demo ekstra selama dua tahun.
+        Semua pengalaman ini membuatku semakin mencintai dunia seni dan tampil dengan percaya diri.</p>
+
+      <a href="#" class="btn" onclick="showPage('page3')">⏮ PREV</a>
+      <a href="#" class="btn" onclick="showPage('page5')">NEXT ⏭</a>
+      <a href="#" class="btn" onclick="showPage('page5')">Mini Galeri</a>
+
+    </div>
+  </div>
+
+  <!-- Halaman 5 -->
+  <div class="page" id="page5">
+    <div class="card">
+      <h2>MINI GALERI</h2>
+      <p>Halo guysss, ini mini galeri aku!! cakep ga?</p>
+      <div class="gallery">
+        <img src="Foto_Chesya/papap1.jpg" alt="Foto 1">
+        <img src="Foto_Chesya/papap2.jpg" alt="Foto 2">
+        <img src="Foto_Chesya/papap3.jpg" alt="Foto 3">
+        <img src="Foto_Chesya/papap5.jpg" alt="Foto 4">
+      </div>
+
+      <a href="#" class="btn" onclick="showPage('page4')">⏮ PREV</a>
+      <a href="#" class="btn" onclick="showPage('page1')">Kembali ke Awal</a>
+
+    </div>
+  </div>
+
+  <script>
+    // Navigasi antar halaman
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+
+    // Efek glitter batch turun (rombongan, lalu jeda 3 detik)
+    const emojis = ["🎀", "💖", "✨", "💗"];
+    function createGlitter() {
+      const glitter = document.createElement("div");
+      glitter.classList.add("glitter");
+      glitter.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      glitter.style.left = Math.random() * window.innerWidth + "px";
+      glitter.style.fontSize = (18 + Math.random() * 10) + "px";
+      document.body.appendChild(glitter);
+
+      setTimeout(() => glitter.remove(), 5000);
+    }
+
+    function glitterBatch() {
+      for (let i = 0; i < 12; i++) { 
+        setTimeout(() => createGlitter(), i * 300); 
+      }
+    }
+
+    // Jalankan batch glitter tiap 6 detik (3 detik turun + 3 detik jeda)
+    setInterval(glitterBatch, 6000);
+    glitterBatch(); 
+  </script>
+   <!-- Footer dengan ikon sosmed -->
+<footer>
+  Dibuat dengan 💖 oleh Chesya |
+  <a href="https://www.instagram.com/chesaauralia?igsh=MWM1emkwcHo2eW54Nw==" target="_blank" class="sosmed">Instagram</a>
+  <a href="https://www.facebook.com/share/1BknBzfqcd/" target="_blank" class="sosmed">Facebook</a>
+</footer>
+
+<style>
+  footer a.sosmed {
+    color: #c2185b; /* pink tua */
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 8px;
+    transition: 0.3s;
+  }
+  footer a.sosmed:hover {
+    color: #ec407a; /* pink lebih terang saat hover */
+  }
+</style>
+  </script>
+</body>
+</html>
